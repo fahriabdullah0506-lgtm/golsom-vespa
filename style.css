@@ -1,0 +1,79 @@
+body{
+    margin:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    background:#111;
+}
+
+.judul{
+    font-size:55px;
+    font-family:Arial, sans-serif;
+    font-weight:bold;
+    text-align:center;
+
+    animation:
+        naikTurun 2s ease-in-out infinite,
+        warna 1s linear infinite,
+        kedip .4s infinite;
+}
+
+/* Gerak atas bawah */
+@keyframes naikTurun{
+    0%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-20px);
+    }
+    100%{
+        transform:translateY(0);
+    }
+}
+
+/* Ganti warna */
+@keyframes warna{
+    0%{
+        color:red;
+    }
+    20%{
+        color:orange;
+    }
+    40%{
+        color:yellow;
+    }
+    60%{
+        color:lime;
+    }
+    80%{
+        color:cyan;
+    }
+    100%{
+        color:magenta;
+    }
+}
+
+/* Efek kedip */
+@keyframes kedip{
+    0%,100%{
+        opacity:1;
+    }
+    50%{
+        opacity:.4;
+    }
+}
+.judul{
+    font-size:55px;
+    font-weight:bold;
+    animation:
+        naikTurun 2s ease-in-out infinite,
+        warna 1s linear infinite,
+        kedip .4s infinite;
+
+    text-shadow:
+        0 0 10px currentColor,
+        0 0 20px currentColor,
+        0 0 40px currentColor,
+        0 0 60px currentColor;
+}
